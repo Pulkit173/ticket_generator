@@ -6,23 +6,30 @@ import { FaXTwitter } from "react-icons/fa6";
 function TicketGenerator() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    flight: "",
-    fromCity: "",
-    fromCode: "",
-    toCity: "",
-    toCode: "",
-    terminal: "",
-    gate: "",
-    seat: "",
-    class: "",
-    boardingTime: "",
-    departureTime: "",
-    duration: "",
-    arrivalTime: "",
+    flight: "AL 101",
+    fromCity: "AIRPORT",
+    fromCode: "AIR",
+    toCity: "CHENNAI",
+    toCode: "SRM",
+    terminal: "TP STAIRS",
+    gate: "1",
+    seat: "WISH",
+    class: "TP 205",
+    boardingTime: "4:45",
+    departureTime: "5:00",
+    duration: "1:30",
+    arrivalTime: "6:30",
     passenger: "",
-    date: "",
-  });
+    date: "TUE, 28 Jan 2025",
+    email: "",
+    contact: "",
+    department: "",
+    section: "",
+    Name: "",
+    faContact: "",
+    question: "",
 
+  });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -57,127 +64,63 @@ function TicketGenerator() {
           </h2>
           <form className="space-y-6">
             <div className="grid grid-cols-2 gap-5">
-              <input
-                type="text"
-                name="flight"
-                placeholder="Flight"
-                value={formData.flight}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="fromCity"
-                placeholder="From City"
-                value={formData.fromCity}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="fromCode"
-                placeholder="From Code"
-                value={formData.fromCode}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="toCity"
-                placeholder="To City"
-                value={formData.toCity}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="toCode"
-                placeholder="To Code"
-                value={formData.toCode}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="terminal"
-                placeholder="Terminal"
-                value={formData.terminal}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="gate"
-                placeholder="Gate"
-                value={formData.gate}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="seat"
-                placeholder="Seat"
-                value={formData.seat}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="class"
-                placeholder="Class"
-                value={formData.class}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="boardingTime"
-                placeholder="Boarding Time"
-                value={formData.boardingTime}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="departureTime"
-                placeholder="Departure Time"
-                value={formData.departureTime}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="duration"
-                placeholder="Duration"
-                value={formData.duration}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
-              <input
-                type="text"
-                name="arrivalTime"
-                placeholder="Arrival Time"
-                value={formData.arrivalTime}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
+             
               <input
                 type="text"
                 name="passenger"
-                placeholder="Passenger"
+                placeholder="Passenger Name"
                 value={formData.passenger}
                 onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
+                className="w-full bg-black border border-white mt-4 p-3 rounded-md text-white"
               />
               <input
-                type="text"
-                name="date"
-                placeholder="Date"
-                value={formData.date}
-                onChange={handleInputChange}
-                className="w-full bg-black border border-white p-3 rounded-md text-white"
-              />
+          type="email"
+          name="email"
+          placeholder="SRM Mail ID"
+          value={formData.email}
+          onChange={handleInputChange}
+          className="w-full  bg-black border border-white mt-4 p-3 rounded-md text-white"
+        />
+         <input
+          type="text"
+          name="contact"
+          placeholder="Contact"
+          value={formData.contact}
+          onChange={handleInputChange}
+          className="w-full bg-black border border-white mt-4 p-3 rounded-md text-white"
+        />
+        <input
+          type="text"
+          name="department"
+          placeholder="Department"
+          value={formData.department}
+          onChange={handleInputChange}
+          className="w-full bg-black border border-white mt-4 p-3 rounded-md text-white"
+        />
+        <input
+          type="text"
+          name="section"
+          placeholder="Section"
+          value={formData.section}
+          onChange={handleInputChange}
+          className="w-full bg-black border border-white mt-4 p-3 rounded-md text-white"
+        />
+        <input
+          type="text"
+          name="faContact"
+          placeholder="FA Contact No"
+          value={formData.faContact}
+          onChange={handleInputChange}
+          className="w-full bg-black border border-white mt-4 p-3 rounded-md text-white"
+        />
             </div>
+            <textarea
+        name="question"
+        placeholder="Any questions for the speaker?"
+        value={formData.question}
+        onChange={handleInputChange}
+        className="w-full bg-black border border-white p-3 rounded-md text-white"
+      ></textarea>
           </form>
           <button
             onClick={handleNextStep}
@@ -190,7 +133,7 @@ function TicketGenerator() {
 
       {/* Step 2: Boarding Pass Preview */}
       {step === 2 && (
-        <div className="relative w-[350px] h-[420px] bg-white rounded-xl  text-gray-800 text-xs uppercase mx-auto my-6">
+        <div className="relative w-[350px] h-[455px] bg-white rounded-xl  text-gray-800 text-xs uppercase mx-auto my-6">
           {/* Header */}
           <header className="bg-gradient-to-b from-gray-800 to-gray-700 p-3 flex justify-between items-center text-white">
             <svg className="w-16 h-8">
@@ -265,9 +208,14 @@ function TicketGenerator() {
             <div className="flex justify-between items-center p-3">
               <div>
                 <div className="mb-2">
-                  <small className="text-gray-500">Passenger </small>
+                  <small className="text-gray-500">Passenger Name</small>
                   <br />
                   <strong>{formData.passenger}</strong>
+                </div>
+                <div className="mb-2">
+                  <small className="text-gray-500">SRM Mail ID</small>
+                  <br />
+                  <strong>{formData.email}</strong>
                 </div>
                 <div>
                   <small className="text-gray-500">Date </small>
