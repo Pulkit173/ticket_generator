@@ -1,0 +1,14 @@
+@keyframes move {
+    40% {
+      left: 50%;
+      opacity: 1;
+    }
+    100% {
+      left: 70%;
+      opacity: 0;
+    }
+  }
+  .animate-move {
+    animation: move 3s infinite;
+  }
+  
