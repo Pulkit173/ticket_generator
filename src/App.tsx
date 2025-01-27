@@ -136,9 +136,11 @@ function TicketGenerator() {
         <div className="relative w-[350px] h-[455px] bg-white rounded-xl  text-gray-800 text-xs uppercase mx-auto my-6">
           {/* Header */}
           <header className="bg-gradient-to-b from-gray-800 to-gray-700 p-3 flex justify-between items-center text-white">
-            <svg className="w-16 h-8">
-              <use xlinkHref="#alitalia"></use>
-            </svg>
+          <img
+              src="https://s3-alpha-sig.figma.com/img/c64c/8948/b0d57ef03e84484835d5a2bc1f5a2116?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lWRgc4wdnJgj2psXf2k2g9m2aM-0O3EyIn17WoCeD~vWuTZ8F5uAJUdUmxalFV4Kj1OAyQfsVE4FefB~Bxub6O1cJH5vdKiKygjBOBmvxWYW2JMvRO3-d9GQ-zX4tNnbVUZgtFNgtpo3i1SMlc9gQZO4XLIgtiqPyqCLC8byDis6hPwJt-teWKHhcXqKiEt-Q2P~ctV44Qt5XYNDSk4fucuSvlL0vnu6lkPHqwLdr8HbnVR-rsLaJxU2MqKrnsyzqU~aO2b3uE3tjaXWMvxH8NRj8d8Yt4ZP0pGzLIEbiZZvvqs31X5jrOoL510c5bJCjMNJXN7~pZC0iRYw9QWFSQ__" // Replace with the actual path to your image
+              alt="Logo"
+              className="w-16 h-8 object-contain"
+            />
             <div className="text-right">
               <small className="block text-[8px] opacity-80">Flight</small>
               <strong className="text-lg">{formData.flight}</strong>
