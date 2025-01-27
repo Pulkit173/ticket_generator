@@ -17,7 +17,7 @@ function TicketGenerator() {
     class: "TP 205",
     boardingTime: "4:45",
     departureTime: "5:00",
-    duration: "1:30",
+    duration: "1:30 hr",
     arrivalTime: "6:30",
     passenger: "",
     date: "TUE, 28 Jan 2025",
