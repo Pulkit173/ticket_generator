@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 function TicketGenerator() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    flight: "AL 101",
+    flight: "E-CELL101",
     fromCity: "AIRPORT",
     fromCode: "AIR",
     toCity: "CHENNAI",
